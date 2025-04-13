@@ -16,6 +16,13 @@
   - [Docker](https://www.docker.com/): Plataforma para criação, envio e execução de containers.
   - [Docker Compose](https://docs.docker.com/compose/): Ferramenta para definir e executar aplicativos Docker multi-containers.
 
+## 🗂️ Arquitetura da Aplicação
+
+A arquitetura do projeto pode ser visualizada abaixo:
+
+![Arquitetura da Aplicação](./arquitetura.png)
+
+
 ## 📦 Instalação
 
 ### **Instalar Dependências**
