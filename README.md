@@ -22,13 +22,13 @@
 
 1. Clone o repositório:
 
-   ```bash
+   ```
    git clone https://github.com/vimmasi/buscoescala_v3.git
    ```
 
 2. Navegue até o diretório do projeto:
 
-   ```bash
+   ```
    cd buscoescala_v3
    ```
 
@@ -38,21 +38,23 @@ Este repositório já contém o arquivo `docker-compose.yml`, que configura os c
 
 Para rodar a aplicação localmente com o Docker Compose, basta executar o seguinte comando:
 
-```bash
-sudo docker-compose up --build
 ```
+sudo docker compose up --build
+```
+
+- Caso tenha uma versão antiga do Docker, rode:
 
 Isso irá:
 
 - Construir e iniciar os containers do frontend (Vue) e backend (Flask).
-- A aplicação será acessível em [http://localhost:8080](http://localhost:8080) para o frontend e [http://localhost:5000](http://localhost:5000) para a API (backend).
+- A aplicação será acessível em [http://localhost:8080](http://localhost:8080) para o frontend e [http://localhost:5001](http://localhost:5001) para a API (backend).
 
 ### **Parar os Containers**
 
 Para parar os containers que estão rodando, use o comando:
 
-```bash
-sudo docker-compose down
+```
+sudo docker compose down
 ```
 
 Isso irá parar e remover todos os containers, redes e volumes definidos no `docker-compose.yml`.
@@ -61,13 +63,13 @@ Isso irá parar e remover todos os containers, redes e volumes definidos no `doc
 
 ### **Dockerizando a Aplicação**
 
-Caso queira rodar os containers manualmente, sem usar o `docker-compose.yml`, você pode seguir os seguintes passos.
+Caso queira rodar os containers separadamente, sem usar o `docker-compose.yml`, pode seguir os seguintes passos.
 
 #### **1. Criando a Imagem Docker para a API (Flask)**
 
 Na raiz do projeto, dentro do diretório `buscoescala_api`, execute:
 
-```bash
+```
 sudo docker build -t buscoescala-api ./buscoescala_api
 ```
 
@@ -75,7 +77,7 @@ sudo docker build -t buscoescala-api ./buscoescala_api
 
 Na raiz do projeto, dentro do diretório `buscoescala_front_v4`, execute:
 
-```bash
+```
 sudo docker build -t buscoescala-front ./buscoescala_front_v4
 ```
 
@@ -83,7 +85,7 @@ sudo docker build -t buscoescala-front ./buscoescala_front_v4
 
 Depois de construir as imagens, rode os containers:
 
-```bash
+```
 sudo docker run -d -p 5000:5000 buscoescala-api
 sudo docker run -d -p 8080:80 buscoescala-front
 ```
@@ -97,25 +99,25 @@ Isso fará com que a aplicação esteja disponível em:
 
 Para parar os containers, use:
 
-```bash
+```
 sudo docker stop <CONTAINER_ID>
 ```
 
 Onde você pode obter o `CONTAINER_ID` com:
 
-```bash
+```
 sudo docker ps
 ```
 
 Para remover o container depois de parar:
 
-```bash
+```
 sudo docker rm <CONTAINER_ID>
 ```
 
 Ou para parar e remover de uma vez:
 
-```bash
+```
 sudo docker rm -f <CONTAINER_ID>
 ```
 
@@ -123,7 +125,7 @@ sudo docker rm -f <CONTAINER_ID>
 
 O repositório é composto por duas principais pastas, uma para o backend e outra para o frontend:
 
-```bash
+```
 buscoescala_v3/
 ├── buscoescala_api/
 │   ├── app/
@@ -149,11 +151,4 @@ O arquivo `docker-compose.yml` está configurado para orquestrar tanto o fronten
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a [MIT License](LICENSE).
-
-```
-
-3. Após colar o conteúdo, salve o arquivo com o nome `README.md`.
-
-Agora você terá o README.md conforme solicitado! Se precisar de mais alguma coisa, estarei por aqui.
-```
+livre.

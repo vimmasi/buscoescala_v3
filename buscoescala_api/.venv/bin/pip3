@@ -1,4 +1,4 @@
-#!/home/vicmartins/Documentos/buscoescala_api/.venv/bin/python3
+#!/home/vicmartins/Documentos/buscoescala_v3/buscoescala_api/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV=/home/vicmartins/Documentos/buscoescala_api/.venv
+VIRTUAL_ENV=/home/vicmartins/Documentos/buscoescala_v3/buscoescala_api/.venv
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

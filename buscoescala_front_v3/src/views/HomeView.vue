@@ -1,11 +1,8 @@
 <template>
   <div class="flex justify-between items-center bg-gray-800 text-white p-4">
     <h1 class="text-2xl font-bold">Busco Escala - FRONT</h1>
-    <button
-      @click="signOut"
-      type="submit"
-      class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-500/80 cursor-pointer"
-    >
+    <button @click="signOut" type="submit"
+      class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-500/80 cursor-pointer">
       Sair
     </button>
   </div>
@@ -15,12 +12,9 @@
       <div v-if="loading">Carregando escalas...</div>
       <div v-else-if="escalas.length === 0">Nenhuma escala encontrada.</div>
       <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div
-          v-for="escala in escalas"
-          :key="escala.id"
+        <div v-for="escala in escalas" :key="escala.id"
           class="border p-4 rounded shadow hover:shadow-lg transition-shadow duration-200 ease-in-out cursor-pointer"
-          :class="{ 'border-blue-500': selectedEscala?.id === escala.id }"
-        >
+          :class="{ 'border-blue-500': selectedEscala?.id === escala.id }">
           <div class="flex justify-between">
             <h3 class="text-lg font-medium">{{ escala.mes }}</h3>
             <!-- <p>ID: {{ escala.id }}</p> -->
@@ -28,10 +22,8 @@
               Militares: {{ escala.militares ? escala.militares.length : 0 }}
             </p>
           </div>
-          <button
-            @click="selectEscala(escala)"
-            class="mt-2 px-3 py-1 bg-blue-500 hover:bg-blue-500/80 cursor-pointer text-white rounded"
-          >
+          <button @click="selectEscala(escala)"
+            class="mt-2 px-3 py-1 bg-blue-500 hover:bg-blue-500/80 cursor-pointer text-white rounded">
             Selecionar
           </button>
         </div>
@@ -48,24 +40,13 @@
         <form @submit.prevent="adicionarMilitar" class="flex flex-col gap-2">
           <div>
             <label class="block">Patente:</label>
-            <input
-              v-model="novoMilitar.patente"
-              required
-              class="border p-2 w-full rounded"
-            />
+            <input v-model="novoMilitar.patente" required class="border p-2 w-full rounded" />
           </div>
           <div>
             <label class="block">Nome:</label>
-            <input
-              v-model="novoMilitar.nome"
-              required
-              class="border p-2 w-full rounded"
-            />
+            <input v-model="novoMilitar.nome" required class="border p-2 w-full rounded" />
           </div>
-          <button
-            type="submit"
-            class="px-4 py-2 bg-green-500 text-white rounded"
-          >
+          <button type="submit" class="px-4 py-2 bg-green-500 text-white rounded">
             Adicionar Militar
           </button>
         </form>
@@ -75,11 +56,8 @@
         Nenhum militar nesta escala.
       </div>
       <div v-else>
-        <div
-          v-for="militar in selectedEscala.militares"
-          :key="militar.id"
-          class="border p-4 rounded mb-2 flex justify-between items-center"
-        >
+        <div v-for="militar in selectedEscala.militares" :key="militar.id"
+          class="border p-4 rounded mb-2 flex justify-between items-center">
           <div>
             <p>
               <strong>{{ militar.patente }}</strong> {{ militar.nome }}
@@ -88,44 +66,21 @@
           </div>
           <div v-if="editandoMilitar && editandoMilitar.id === militar.id">
             <form @submit.prevent="atualizarMilitar" class="flex gap-2">
-              <input
-                v-model="editandoMilitar.patente"
-                placeholder="Patente"
-                required
-                class="border p-1 rounded"
-              />
-              <input
-                v-model="editandoMilitar.nome"
-                placeholder="Nome"
-                required
-                class="border p-1 rounded"
-              />
-              <button
-                type="submit"
-                class="px-2 py-1 bg-blue-500 text-white rounded"
-              >
+              <input v-model="editandoMilitar.patente" placeholder="Patente" required class="border p-1 rounded" />
+              <input v-model="editandoMilitar.nome" placeholder="Nome" required class="border p-1 rounded" />
+              <button type="submit" class="px-2 py-1 bg-blue-500 text-white rounded">
                 Salvar
               </button>
-              <button
-                type="button"
-                @click="cancelarEdicao"
-                class="px-2 py-1 bg-gray-500 text-white rounded"
-              >
+              <button type="button" @click="cancelarEdicao" class="px-2 py-1 bg-gray-500 text-white rounded">
                 Cancelar
               </button>
             </form>
           </div>
           <div v-else class="flex gap-2">
-            <button
-              @click="iniciarEdicao(militar)"
-              class="px-2 py-1 bg-yellow-500 text-white rounded"
-            >
+            <button @click="iniciarEdicao(militar)" class="px-2 py-1 bg-yellow-500 text-white rounded">
               Editar
             </button>
-            <button
-              @click="removerMilitar(militar.id)"
-              class="px-2 py-1 bg-red-500 text-white rounded"
-            >
+            <button @click="removerMilitar(militar.id)" class="px-2 py-1 bg-red-500 text-white rounded">
               Remover
             </button>
           </div>
@@ -155,7 +110,7 @@ async function signOut() {
   }
 }
 
-const API_URL = "http://localhost:5000";
+const API_URL = "http://localhost:5001";
 
 // Gerenciamento de estado
 const escalas = ref([]);
