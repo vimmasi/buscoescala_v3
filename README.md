@@ -42,7 +42,7 @@ Para rodar a aplicação localmente com o Docker Compose, basta executar o segui
 sudo docker compose up --build
 ```
 
-- Caso tenha uma versão antiga do Docker, rode:
+- Caso tenha uma versão antiga do Docker, rode: `sudo docker-compose up --build`
 
 Isso irá:
 
