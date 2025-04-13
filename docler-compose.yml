@@ -1,0 +1,25 @@
+version: "3"
+services:
+  frontend:
+    build:
+      context: ./buscoescala_front_v3 # Caminho para o frontend
+    ports:
+      - "8080:80"
+    networks:
+      - buscoescala_network
+
+  backend:
+    build:
+      context: ./buscoescala_api # Caminho para o backend
+    ports:
+      - "5001:5001"
+    networks:
+      - buscoescala_network
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_RUN_HOST=0.0.0.0
+      - FLASK_RUN_PORT=5001
+
+networks:
+  buscoescala_network:
+    driver: bridge
