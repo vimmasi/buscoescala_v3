@@ -75,10 +75,10 @@ sudo docker build -t buscoescala-api ./buscoescala_api
 
 #### **2. Criando a Imagem Docker para o Frontend (Vue)**
 
-Na raiz do projeto, dentro do diretório `buscoescala_front_v4`, execute:
+Na raiz do projeto, dentro do diretório `buscoescala_front_v3`, execute:
 
 ```
-sudo docker build -t buscoescala-front ./buscoescala_front_v4
+sudo docker build -t buscoescala-front ./buscoescala_front_v3
 ```
 
 #### **3. Rodando os Containers**
@@ -86,14 +86,14 @@ sudo docker build -t buscoescala-front ./buscoescala_front_v4
 Depois de construir as imagens, rode os containers:
 
 ```
-sudo docker run -d -p 5000:5000 buscoescala-api
+sudo docker run -d -p 5001:5001 buscoescala-api
 sudo docker run -d -p 8080:80 buscoescala-front
 ```
 
 Isso fará com que a aplicação esteja disponível em:
 
 - **Frontend (Vue)**: [http://localhost:8080](http://localhost:8080)
-- **Backend (Flask API)**: [http://localhost:5000](http://localhost:5000)
+- **Backend (Flask API)**: [http://localhost:5001](http://localhost:5001)
 
 #### **4. Parar os Containers**
 
@@ -132,7 +132,7 @@ buscoescala_v3/
 │   ├── Dockerfile
 │   ├── requirements.txt
 │   └── README.md
-├── buscoescala_front_v4/
+├── buscoescala_front_v3/
 │   ├── public/
 │   ├── src/
 │   │   ├── assets/
