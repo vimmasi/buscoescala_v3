@@ -49,6 +49,12 @@ Isso irá:
 - Construir e iniciar os containers do frontend (Vue) e backend (Flask).
 - A aplicação será acessível em [http://localhost:8080](http://localhost:8080) para o frontend e [http://localhost:5001](http://localhost:5001) para a API (backend).
 
+### **Logando no frontend**
+
+Já existe um usuário cadastrado, para acessar e realizar os testes da aplicação:
+- Email: `admin@admin.com`
+- Senha: `Admin@123`
+
 ### **Parar os Containers**
 
 Para parar os containers que estão rodando, use o comando:
@@ -147,7 +153,7 @@ buscoescala_v3/
 
 ### **docker-compose.yml**
 
-O arquivo `docker-compose.yml` está configurado para orquestrar tanto o frontend quanto o backend. Ele permite que você inicie ambos os containers com um único comando `docker-compose up`.
+O arquivo `docker-compose.yml` está configurado para orquestrar tanto o frontend quanto o backend.
 
 ## 📄 Licença
 
