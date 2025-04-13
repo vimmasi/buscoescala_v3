@@ -1,6 +1,6 @@
-# BuscoEscala v4
+# BuscoEscala v3
 
-**BuscoEscala v4** é uma aplicação web desenvolvida com [Vue 3](https://vuejs.org/) e [Vite](https://vitejs.dev/), projetada para facilitar a busca e visualização de escalas de trabalho.
+**BuscoEscala v3** é uma aplicação web desenvolvida com [Vue 3](https://vuejs.org/) e [Vite](https://vitejs.dev/), projetada para facilitar a busca e visualização de escalas de trabalho.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -17,13 +17,13 @@
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/vimmasi/buscoescala_v4.git
+   git clone https://github.com/vimmasi/buscoescala_v3.git
    ```
 
 2. Navegue até o diretório do projeto:
 
    ```bash
-   cd buscoescala_v4
+   cd buscoescala_v3
    ```
 
 3. Instale as dependências:
@@ -98,7 +98,7 @@ Adicionei o arquivo de configuração `nginx.conf` para resolver conflitos de SP
 ## 📁 Estrutura do Projeto
 
 ```bash
-buscoescala_v4/
+buscoescala_v3/
 ├── public/
 ├── src/
 │   ├── assets/
